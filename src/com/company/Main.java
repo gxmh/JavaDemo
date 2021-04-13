@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -35,11 +36,35 @@ public class Main {
         Boolean flag = sca.nextBoolean();
         System.out.printf("Hi, %s,you are %d\n "+flag,name,age);
 
-	 */
+
         String str[] ={"a","b","c"};
         for (String n: str ) {
             System.out.println(n);
 
         }
+
+	 */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("input array's length");
+        int n=scanner.nextInt();
+        System.out.println("input this array's element");
+        int [] arrays = new int[n];
+        for (int i=0;i<n;i++){
+            System.out.println("input a number");
+            arrays[i]=scanner.nextInt();
+        }
+        System.out.println(Arrays.toString(arrays));
+        for (int j=0;j<arrays.length-1;j++){
+            for (int m=0;m<arrays.length-j-1;m++){
+                if(arrays[m]>arrays[m+1]){
+                    int temp;
+                    temp=arrays[m];
+                    arrays[m]=arrays[m+1];
+                    arrays[m+1]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arrays));
+
     }
 }
