@@ -43,7 +43,7 @@ public class Main {
 
         }
 
-	 */
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("input array's length");
         int n=scanner.nextInt();
@@ -65,6 +65,8 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(arrays));
+
+	 */
 
     }
 }
